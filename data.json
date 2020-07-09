@@ -1,0 +1,62 @@
+"skills" : [
+    {
+    "name":"Java",
+        "usage":
+        [
+         {"experience":"Project: 1",  "begin": "new Date(2012, 1, 1)", "End": "new Date(2014, 1, 1)" }
+         {"experience":"Project: 2",  "begin": "new Date(2012, 1, 1)", "End": "new Date(2014, 1, 1)" },
+         {"experience":"Project: 8",  "begin": "new Date(2019, 1, 1)", "End": "new Date(2021, 1, 1)" },
+         {"experience":"Degree",      "begin": "new Date(2015, 1, 1)", "End": "new Date(2018, 1, 1)" },
+         {"experience":"Marathons",   "begin": "new Date(2013, 1, 1)", "End": "new Date(2017, 1, 1)" },
+        ]
+    },
+    {
+    "name":"C++",
+        "usage":
+        [
+            {"experience":"Project: 3",  "begin": "new Date(2015, 1, 1)", "End": "new Date(2016, 1, 1)" },
+            {"experience":"Project: 4",  "begin": "new Date(2016, 1, 1)", "End": "new Date(2017, 1, 1)" },
+            {"experience":"Project: 6",  "begin": "new Date(2017, 1, 1)", "End": "new Date(2018, 1, 1)" },
+            {"experience":"Project: 7",  "begin": "new Date(2018, 1, 1)", "End": "new Date(2019, 1, 1)" },
+            {"experience":"Master",      "begin": "new Date(2018, 1, 1)", "End": "new Date(2019, 1, 1)" },
+            {"experience":"Marathons",   "begin": "new Date(2013, 1, 1)", "End": "new Date(2017, 1, 1)" },
+        ]
+    },
+    {
+    "name":"Javascript",
+        "usage":
+        [
+            { "experience":"Project: 8",  "begin": "new Date(2019, 1, 1)", "End": "new Date(2021, 1, 1)" },
+            { "experience":"Degree",      "begin": "new Date(2015, 1, 1)", "End": "new Date(2018, 1, 1)" },
+        ]
+    },
+    {
+    "name":"Ruby",
+        "usage":
+        [
+            { "experience":"Degree",      "begin": "new Date(2016, 6, 1)", "End": "new Date(2018, 1, 1)" },
+        ]
+    },
+    {
+    "name":"Matlab",
+        "usage":
+        [
+            { "experience":"Master",      "begin": "new Date(2018, 1, 1)", "End": "new Date(2019, 1, 1)" },
+        ]
+    },
+    {
+    "name":"Python",
+        "usage":
+        [
+            {  "experience":"Project: 9",  "begin": "new Date(2019, 1, 1)", "End": "new Date(2021, 1, 1)" },
+            {  "experience":"Master",      "begin": "new Date(2018, 1, 1)", "End": "new Date(2019, 1, 1)" },
+        ]
+    },
+    {
+    "name":"Sql",
+        "usage":
+        [
+            {  "experience":"Degree",      "begin": "new Date(2015, 1, 1)", "End": "new Date(2018, 1, 1)" }
+        ]
+    },
+]
