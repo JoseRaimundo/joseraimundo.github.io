@@ -24,6 +24,49 @@
     <!-- Custom styles for this template -->
     <link href="css/resume.min.css" rel="stylesheet">
 
+
+    <!-- My scripts -->
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['timeline']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var container = document.getElementById('timeline');
+        var chart = new google.visualization.Timeline(container);
+        var dataTable = new google.visualization.DataTable();
+
+        dataTable.addColumn({ type: 'string', id: 'President' });
+        dataTable.addColumn({ type: 'string', id: 'Name' });
+        dataTable.addColumn({ type: 'date', id: 'Start' });
+        dataTable.addColumn({ type: 'date', id: 'End' });
+
+        dataTable.addRows([
+          [ 'Java', 'Project: 1', new Date(2012, 1, 1), new Date(2014, 1, 1) ],
+          [ 'Java', 'Project: 2', new Date(2012, 1, 1), new Date(2014, 1, 1) ],
+          [ 'Java', 'Project: 8', new Date(2019, 1, 1), new Date(2021, 1, 1) ],
+          [ 'Java', 'Degree', new Date(2015, 1, 1), new Date(2018, 1, 1) ],
+          [ 'Java' , 'Marathons', new Date(2013, 1, 1),  new Date(2017, 1, 1) ],
+          [ 'C++' , 'Project: 3', new Date(2015, 1, 1),  new Date(2016, 1, 1) ],
+          [ 'C++' , 'Project: 4', new Date(2016, 1, 1),  new Date(2017, 1, 1) ],
+          [ 'C++' , 'Project: 6', new Date(2017, 1, 1),  new Date(2018, 1, 1) ],
+          [ 'C++' , 'Project: 7', new Date(2018, 1, 1),  new Date(2019, 1, 1) ],
+          [ 'C++' , 'Master', new Date(2018, 1, 1),  new Date(2019, 1, 1) ],
+          [ 'C++' , 'Marathons', new Date(2013, 1, 1),  new Date(2017, 1, 1) ],
+          [ 'Javascript' , 'Project: 8', new Date(2019, 1, 1),  new Date(2021, 1, 1) ],
+          [ 'Javascript', 'Degree', new Date(2015, 1, 1), new Date(2018, 1, 1) ],
+          [ 'Ruby', 'Degree', new Date(2016, 6, 1), new Date(2018, 1, 1) ],
+          [ 'Matlab' , 'Master', new Date(2018, 1, 1),  new Date(2019, 1, 1) ],
+          [ 'Python' , 'Project: 9', new Date(2019, 1, 1),  new Date(2021, 1, 1) ],
+          [ 'Python' , 'Master', new Date(2018, 1, 1),  new Date(2019, 1, 1) ],
+          [ 'Sql',  'Degree', new Date(2015, 1, 1), new Date(2018, 1, 1) ],
+
+       ]);
+
+        chart.draw(dataTable);
+      }
+    </script>
+
   </head>
 
   <body id="page-top">
@@ -122,7 +165,7 @@
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
               <h3 class="mb-0">Researcher & Software Developer</h3>
-              <div class="subheading mb-3">Digital Signal Processing Group</div>
+              <div class="subheading mb-3"> Project 9: Digital Signal Processing Group</div>
                 <ul>
                     <li>Analysis of cardiac signals through machine learning algorithms.</li>
                     <li>Machine learning, Artificial Neural Network, Gradient Boosting, Data Mining, Python, Sklearn</li>
@@ -139,7 +182,7 @@
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
               <div class="resume-content mr-auto">
                 <h3 class="mb-0">Project manager & Software Developer</h3>
-                <div class="subheading mb-3">Secretariat of Education, Science and Tecnology fo the Paraiba State</div>
+                <div class="subheading mb-3">Project 8: Secretariat of Education, Science and Tecnology fo the Paraiba State</div>
                   <ul>
                       <li>Development of an <a href=http://201.18.100.155/>system</a> to monitor the water desalination units of the <a href="http://www.mma.gov.br/agua/agua-doce">Agua Doce project</a>. </li>
                       <li>Online system using nodejs, postgress. Terminal app for Android smartphones (Kotlin, Java, Android)</li>
@@ -155,7 +198,7 @@
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
               <h3 class="mb-0">Researcher & Software Developer</h3>
-              <div class="subheading mb-3">Digital Signal Processing Group</div>
+              <div class="subheading mb-3">Project 7: Digital Signal Processing Group</div>
                 <ul>
                     <li>Development of an automated test service for HEVC encoders</li>
                     <li>Online system using Node Js, AngularJs and Reack, Back-end using C++</li>
@@ -173,7 +216,7 @@
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
               <h3 class="mb-0">Researcher & Software Developer</h3>
-              <div class="subheading mb-3">Digital Signal Processing Group</div>
+              <div class="subheading mb-3">Project 6: Digital Signal Processing Group</div>
                 <ul>
                 <li>Study for Enhancement of the HEVC Encoding Process Using Machine Learning Techniques</li>
                 <li>HM16, Support Vector Machine, DLIB, C++.</li>
@@ -192,7 +235,7 @@
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
               <h3 class="mb-0">Researcher</h3>
-              <div class="subheading mb-3">Commercial Management Study Group</div>
+              <div class="subheading mb-3">Project 5: Commercial Management Study Group</div>
               <ul>
                 <li>Analysis of the scope of social media in the dissemination of an IFPB scientific journal</li>
                 <li>The goal of research is to study the best way to communicate with users through social media, also identifying the 
@@ -208,7 +251,7 @@
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
               <h3 class="mb-0">Researcher & Software Developer</h3>
-              <div class="subheading mb-3">Digital Signal Processing Group</div>
+              <div class="subheading mb-3">Project 4: Digital Signal Processing Group</div>
                 <ul>
                     <li>Parallel Processing for Transcoding UHD Videos, C/C++, OpenCV</li>
                     <li>The goal of the project was to develop transcoders for UHD videos in a distributed architecture that allow for the production of good-quality videos that perform real-time processing. For this, we will study techniques for real-time spatial transcoding of UHD videos, applying techniques to optimize the quality of transcoded videos, taking into account their spatial characteristics</li>
@@ -223,7 +266,7 @@
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
               <h3 class="mb-0">Researcher & Software Developer</h3>
-              <div class="subheading mb-3">Digital Video Application Laboratory</div>
+              <div class="subheading mb-3">Project 3: Digital Video Application Laboratory</div>
               <ul>
                 <li>Evolution of 4K Videocaboration Platforms</li>
                 <li>FFmpeg, OpenGL, C/C++</li>
@@ -239,7 +282,7 @@
           <div class="resume-item d-flex flex-column flex-md-row">
             <div class="resume-content mr-auto">
               <h3 class="mb-0">Researcher & Software Developer</h3>
-              <div class="subheading mb-3">Laboratory of Distributed and Embedded Computing</div>
+              <div class="subheading mb-3">Project 2: Laboratory of Distributed and Embedded Computing</div>
                 <ul>
                 <li>Java, TCP/IP protocols</li>
                 <li>Challenges and Applications of Industrial Wireless Sensor Networks</li>
@@ -255,7 +298,7 @@
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
               <h3 class="mb-0">Researcher & Software Developer</h3>
-              <div class="subheading mb-3">Laboratory of Distributed and Embedded Computing</div>
+              <div class="subheading mb-3">Project 1: Laboratory of Distributed and Embedded Computing</div>
                 <ul>
                 <li>Development of Monitoring and Control Systems for Three Phase Induction Motors</li>
                 <li>The goal of this work was the development of a system for real-time monitoring and control of industrial motors based on Wireless Sensor Networks (WSNs). Intelligent embedded systems will be developed, capable of obtaining data from sensors and performing processing to estimate various parameters, such as efficiency, torque and fault diagnosis in electric motors, as well as software to aid the monitoring process.</li>
@@ -387,7 +430,13 @@
               <i class="fa-li fa fa-check"></i>
               Latex, Github, Android</li>
             <li>
-	</ul>
+  </ul>
+ <br>
+  <div class="subheading mb-3">Skills experience</div>
+
+  <div id="timeline" style="height: 500px"></div>
+
+  
 
           <div class="subheading mb-3">Knowledge</div>
           <ul class="fa-ul mb-0">
