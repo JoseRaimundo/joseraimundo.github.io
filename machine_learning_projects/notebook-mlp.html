@@ -13522,14 +13522,14 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[128]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">feature_selection_rfe</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
     <span class="n">df_temp</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
     <span class="n">y</span> <span class="o">=</span> <span class="n">df_temp</span><span class="p">[</span><span class="n">target</span><span class="p">]</span>
     <span class="n">X</span> <span class="o">=</span> <span class="n">df_temp</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="n">target</span><span class="p">)</span>
-    <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span> <span class="mf">0.3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span> <span class="mf">0.25</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
     
     <span class="n">reg</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
     <span class="n">reg</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
@@ -13565,12 +13565,12 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[112]:</div>
+<div class="prompt input_prompt">In&nbsp;[220]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">create_classifier</span><span class="p">(</span><span class="n">classier_type</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">classier_type</span> <span class="o">==</span> <span class="s2">&quot;mlp&quot;</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">MLPClassifier</span><span class="p">(</span><span class="n">hidden_layer_sizes</span><span class="o">=</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">3000</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">MLPClassifier</span><span class="p">(</span><span class="n">hidden_layer_sizes</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">1024</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">16</span><span class="p">),</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">5000</span><span class="p">)</span>
     
     <span class="k">elif</span> <span class="n">classier_type</span> <span class="o">==</span> <span class="s2">&quot;knn&quot;</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span> <span class="n">n_neighbors</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> 
@@ -15164,7 +15164,7 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[116]:</div>
+<div class="prompt input_prompt">In&nbsp;[243]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># ### Dataframe for save the results</span>
@@ -15187,7 +15187,7 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[117]:</div>
+<div class="prompt input_prompt">In&nbsp;[245]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">result_log</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
@@ -15212,9 +15212,9 @@ if (outputEl) {{
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Finish -  gb : ACC 0.6667
-Finish -  knn : ACC 0.3333
-Finish -  mlp : ACC 0.8
+<pre>Finish -  gb : ACC 0.4667
+Finish -  knn : ACC 0.5333
+Finish -  mlp : ACC 0.8667
 Finish -  gab : ACC 0.6667
 </pre>
 </div>
@@ -15226,7 +15226,7 @@ Finish -  gab : ACC 0.6667
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[118]:</div>
+<div class="prompt input_prompt">In&nbsp;[246]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">result_log_final</span> <span class="o">=</span> <span class="n">result_log_final</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">result_log</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -15248,7 +15248,7 @@ Finish -  gab : ACC 0.6667
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[119]:</div>
+<div class="prompt input_prompt">In&nbsp;[252]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">result_log</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
@@ -15273,10 +15273,10 @@ Finish -  gab : ACC 0.6667
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Finish -  gb : ACC 0.7333
-Finish -  knn : ACC 0.2667
-Finish -  mlp : ACC 0.8
-Finish -  gab : ACC 0.6667
+<pre>Finish -  gb : ACC 0.8667
+Finish -  knn : ACC 0.4
+Finish -  mlp : ACC 0.9333
+Finish -  gab : ACC 0.7333
 </pre>
 </div>
 </div>
@@ -15287,10 +15287,23 @@ Finish -  gab : ACC 0.6667
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[120]:</div>
+<div class="prompt input_prompt">In&nbsp;[253]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">result_log_final</span> <span class="o">=</span> <span class="n">result_log_final</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">result_log</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[254]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># result_log_final.head(10)</span>
 </pre></div>
 
     </div>
@@ -15309,7 +15322,7 @@ Finish -  gab : ACC 0.6667
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[125]:</div>
+<div class="prompt input_prompt">In&nbsp;[259]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">result_log</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
@@ -15334,10 +15347,10 @@ Finish -  gab : ACC 0.6667
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Finish -  gb : ACC 0.6667
+<pre>Finish -  gb : ACC 0.6
 Finish -  knn : ACC 0.6667
-Finish -  mlp : ACC 0.8667
-Finish -  gab : ACC 0.7333
+Finish -  mlp : ACC 0.8
+Finish -  gab : ACC 0.8
 </pre>
 </div>
 </div>
@@ -15348,7 +15361,7 @@ Finish -  gab : ACC 0.7333
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[126]:</div>
+<div class="prompt input_prompt">In&nbsp;[260]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">result_log_final</span> <span class="o">=</span> <span class="n">result_log_final</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">result_log</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -15370,7 +15383,7 @@ Finish -  gab : ACC 0.7333
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[127]:</div>
+<div class="prompt input_prompt">In&nbsp;[261]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">result_log_final</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
@@ -15386,7 +15399,7 @@ Finish -  gab : ACC 0.7333
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[127]:</div>
+    <div class="prompt output_prompt">Out[261]:</div>
 
 
 
@@ -15429,16 +15442,16 @@ Finish -  gab : ACC 0.7333
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.796</td>
-      <td>0.850</td>
-      <td>0.800</td>
-      <td>1.000</td>
-      <td>0.700</td>
-      <td>1.000</td>
-      <td>0.6667</td>
-      <td>0.7273</td>
-      <td>0.8000</td>
-      <td>0.4000</td>
+      <td>0.866</td>
+      <td>0.866</td>
+      <td>0.867</td>
+      <td>0.857</td>
+      <td>0.857</td>
+      <td>0.875</td>
+      <td>0.4667</td>
+      <td>0.4444</td>
+      <td>0.5714</td>
+      <td>0.3750</td>
       <td>gb</td>
       <td>Original</td>
       <td>39</td>
@@ -15447,16 +15460,16 @@ Finish -  gab : ACC 0.7333
     </tr>
     <tr>
       <th>1</th>
-      <td>0.661</td>
-      <td>0.661</td>
+      <td>0.641</td>
+      <td>0.688</td>
       <td>0.667</td>
-      <td>0.667</td>
-      <td>0.571</td>
-      <td>0.750</td>
-      <td>0.3333</td>
-      <td>0.2000</td>
-      <td>0.1429</td>
+      <td>1.000</td>
+      <td>0.375</td>
+      <td>1.000</td>
+      <td>0.5333</td>
+      <td>0.5714</td>
       <td>0.5000</td>
+      <td>0.5714</td>
       <td>knn</td>
       <td>Original</td>
       <td>39</td>
@@ -15465,16 +15478,16 @@ Finish -  gab : ACC 0.7333
     </tr>
     <tr>
       <th>2</th>
-      <td>0.722</td>
-      <td>0.723</td>
+      <td>0.732</td>
+      <td>0.750</td>
       <td>0.733</td>
-      <td>0.700</td>
-      <td>0.875</td>
-      <td>0.571</td>
-      <td>0.8000</td>
-      <td>0.7778</td>
-      <td>0.8750</td>
-      <td>0.7143</td>
+      <td>0.857</td>
+      <td>0.667</td>
+      <td>0.833</td>
+      <td>0.8667</td>
+      <td>0.8889</td>
+      <td>0.8889</td>
+      <td>0.8333</td>
       <td>mlp</td>
       <td>Original</td>
       <td>39</td>
@@ -15483,16 +15496,16 @@ Finish -  gab : ACC 0.7333
     </tr>
     <tr>
       <th>3</th>
-      <td>0.796</td>
-      <td>0.812</td>
-      <td>0.800</td>
+      <td>0.932</td>
+      <td>0.944</td>
+      <td>0.933</td>
       <td>1.000</td>
-      <td>0.625</td>
+      <td>0.889</td>
       <td>1.000</td>
       <td>0.6667</td>
-      <td>0.6667</td>
-      <td>0.7500</td>
-      <td>0.5714</td>
+      <td>0.7000</td>
+      <td>0.7778</td>
+      <td>0.5000</td>
       <td>gab</td>
       <td>Original</td>
       <td>39</td>
@@ -15501,16 +15514,16 @@ Finish -  gab : ACC 0.7333
     </tr>
     <tr>
       <th>4</th>
-      <td>0.861</td>
-      <td>0.857</td>
-      <td>0.867</td>
+      <td>0.933</td>
+      <td>0.938</td>
+      <td>0.933</td>
+      <td>0.875</td>
       <td>1.000</td>
-      <td>0.714</td>
-      <td>1.000</td>
-      <td>0.7333</td>
+      <td>0.875</td>
+      <td>0.8667</td>
+      <td>0.7778</td>
       <td>1.0000</td>
-      <td>0.4286</td>
-      <td>1.0000</td>
+      <td>0.7500</td>
       <td>gb</td>
       <td>df_rfe</td>
       <td>39</td>
@@ -15519,16 +15532,16 @@ Finish -  gab : ACC 0.7333
     </tr>
     <tr>
       <th>5</th>
-      <td>0.598</td>
-      <td>0.639</td>
-      <td>0.600</td>
-      <td>0.800</td>
-      <td>0.444</td>
-      <td>0.833</td>
-      <td>0.2667</td>
+      <td>0.667</td>
+      <td>0.670</td>
+      <td>0.667</td>
+      <td>0.714</td>
+      <td>0.625</td>
+      <td>0.714</td>
       <td>0.4000</td>
-      <td>0.4444</td>
-      <td>0.0000</td>
+      <td>0.4286</td>
+      <td>0.3750</td>
+      <td>0.4286</td>
       <td>knn</td>
       <td>df_rfe</td>
       <td>39</td>
@@ -15537,16 +15550,16 @@ Finish -  gab : ACC 0.7333
     </tr>
     <tr>
       <th>6</th>
+      <td>0.661</td>
+      <td>0.722</td>
       <td>0.667</td>
-      <td>0.750</td>
-      <td>0.667</td>
+      <td>0.545</td>
       <td>1.000</td>
-      <td>0.500</td>
-      <td>1.000</td>
-      <td>0.8000</td>
-      <td>0.7692</td>
+      <td>0.444</td>
+      <td>0.9333</td>
+      <td>0.8571</td>
       <td>1.0000</td>
-      <td>0.4000</td>
+      <td>0.8889</td>
       <td>mlp</td>
       <td>df_rfe</td>
       <td>39</td>
@@ -15555,16 +15568,16 @@ Finish -  gab : ACC 0.7333
     </tr>
     <tr>
       <th>7</th>
-      <td>0.866</td>
-      <td>0.866</td>
-      <td>0.867</td>
-      <td>0.857</td>
-      <td>0.857</td>
+      <td>0.933</td>
+      <td>0.938</td>
+      <td>0.933</td>
       <td>0.875</td>
-      <td>0.6667</td>
+      <td>1.000</td>
+      <td>0.875</td>
+      <td>0.7333</td>
+      <td>0.7143</td>
+      <td>0.7143</td>
       <td>0.7500</td>
-      <td>0.4286</td>
-      <td>0.8750</td>
       <td>gab</td>
       <td>df_rfe</td>
       <td>39</td>
@@ -15573,16 +15586,16 @@ Finish -  gab : ACC 0.7333
     </tr>
     <tr>
       <th>8</th>
-      <td>0.861</td>
-      <td>0.861</td>
-      <td>0.867</td>
-      <td>0.833</td>
-      <td>0.833</td>
-      <td>0.889</td>
-      <td>0.6667</td>
-      <td>0.5714</td>
-      <td>0.6667</td>
-      <td>0.6667</td>
+      <td>0.700</td>
+      <td>0.700</td>
+      <td>0.733</td>
+      <td>0.600</td>
+      <td>0.600</td>
+      <td>0.800</td>
+      <td>0.6000</td>
+      <td>0.3333</td>
+      <td>0.2000</td>
+      <td>0.8000</td>
       <td>gb</td>
       <td>df_forest</td>
       <td>39</td>
@@ -15591,16 +15604,16 @@ Finish -  gab : ACC 0.7333
     </tr>
     <tr>
       <th>9</th>
-      <td>0.722</td>
-      <td>0.723</td>
-      <td>0.733</td>
+      <td>0.796</td>
+      <td>0.850</td>
       <td>0.800</td>
-      <td>0.571</td>
-      <td>0.875</td>
+      <td>1.000</td>
+      <td>0.700</td>
+      <td>1.000</td>
       <td>0.6667</td>
-      <td>0.7500</td>
-      <td>0.4286</td>
-      <td>0.8750</td>
+      <td>0.6667</td>
+      <td>1.0000</td>
+      <td>0.0000</td>
       <td>knn</td>
       <td>df_forest</td>
       <td>39</td>
@@ -15609,16 +15622,16 @@ Finish -  gab : ACC 0.7333
     </tr>
     <tr>
       <th>10</th>
-      <td>0.861</td>
-      <td>0.857</td>
-      <td>0.867</td>
-      <td>0.800</td>
-      <td>1.000</td>
-      <td>0.714</td>
-      <td>0.8667</td>
-      <td>1.0000</td>
-      <td>0.7500</td>
-      <td>1.0000</td>
+      <td>0.389</td>
+      <td>0.444</td>
+      <td>0.400</td>
+      <td>0.500</td>
+      <td>0.222</td>
+      <td>0.667</td>
+      <td>0.8000</td>
+      <td>0.8750</td>
+      <td>0.7778</td>
+      <td>0.8333</td>
       <td>mlp</td>
       <td>df_forest</td>
       <td>39</td>
@@ -15627,16 +15640,16 @@ Finish -  gab : ACC 0.7333
     </tr>
     <tr>
       <th>11</th>
-      <td>0.932</td>
-      <td>0.929</td>
-      <td>0.933</td>
-      <td>0.889</td>
-      <td>1.000</td>
+      <td>0.800</td>
+      <td>0.804</td>
+      <td>0.800</td>
+      <td>0.750</td>
       <td>0.857</td>
-      <td>0.7333</td>
-      <td>0.7000</td>
-      <td>0.8750</td>
+      <td>0.750</td>
+      <td>0.8000</td>
+      <td>1.0000</td>
       <td>0.5714</td>
+      <td>1.0000</td>
       <td>gab</td>
       <td>df_forest</td>
       <td>39</td>
