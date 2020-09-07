@@ -613,39 +613,6 @@ var data =
 
       
 
-      <script>
-          var myObj, i, x = "";
-          myObj = {
-            "name":"John",
-            "age":30,
-            "cars":[ "Ford", "BMW", "Fiat" ]
-          };
-
-          certificates_vet = { "courses": [{
-                                  "instituition": "Codenation",
-                                  "name": "Aceleração Data Science",
-                                  "hours": "80h",
-                                  "year": "2010",
-                                  "file": "certificates/2020_01.pdf"
-                                }]
-                              },
-                              {
-                                "presentations": [{
-                                  "instituition": "Codenation",
-                                  "name": "Aceleração Data Science",
-                                  "hours": "80h",
-                                  "year": "2010",
-                                  "file": "certificates/2020_01.pdf"
-                                }]
-                            }
-          
-          var c =  "";
-          certificates_vet.courses.forEach(element => {
-            c += "<li><i class=\"fa-li fa fa-trophy text-warning\"></i><a href=\"" +  element.file + "\" target=\"blank\">"+ element.year +" - "+ element.name +" - "+ element.instituition +"</a></li>";
-          });
-          document.getElementById("courses_key").innerHTML = c;
-      </script>
-      
 
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects">
         <div class="my-auto">
@@ -671,6 +638,8 @@ var data =
 
     <!-- Custom scripts for this template -->
     <script src="js/resume.min.js"></script>
+
+    <script src="js/script.js"></script>
 
   </body>
 
