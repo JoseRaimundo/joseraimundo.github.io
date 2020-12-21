@@ -70,6 +70,11 @@ certificates_vet = [
 ]
 
 
+function loadCV(){
+    let cv_file = "<a href=\"docs/cv_jose_raimundo_ptbr.pdf\" target=\"blank\">\"Baixe aqui o CV Resumido em PDF\"</a>"
+    document.getElementById("cv_key").innerHTML = cv_file;
+}
+
 function loadCertificates() {
     let str_courses =  "";
     let str_presentations =  "";
