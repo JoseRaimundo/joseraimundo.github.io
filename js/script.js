@@ -8,7 +8,7 @@ certificates_vet = [
                 "name": "Aceleração Data Science",
                 "hours": "80h",
                 "year": "2020",
-                "file": "certificates/courses/2020_01.pdf"
+                "file": "certificates/courses/2020_codenation.pdf"
             },{
                 "instituition": "Instituto Federal da Paraíba",
                 "name": "Introdução a Deep Learning",
@@ -22,7 +22,7 @@ certificates_vet = [
                 "year": "2016",
                 "file": "certificates/courses/2016_encom.pdf"
             },{
-                "instituition": "Computar on the Beach,",
+                "instituition": "Computar on the Beach",
                 "name": "Jogos Multiplataforma com Cocos2d-x",
                 "hours": "4h",
                 "year": "2015",
@@ -77,7 +77,7 @@ function loadCertificates() {
     certificates_vet.forEach(temp_certificate => {
         if (temp_certificate.courses){
             temp_certificate.courses.forEach( element =>{
-                str_courses += "<li><i class=\"fa-li fa fa-trophy text-warning\"></i><a href=\"" +  element.file + "\" target=\"blank\">"+ element.year +" - "+ element.name +" - "+ element.instituition +"</a></li>";
+                str_courses += "<li><i class=\"fa-li fa fa-list text-warning\"></i><a href=\"" +  element.file + "\" target=\"blank\">"+ element.year +" - "+ element.name +" - "+ element.instituition +"</a></li>";
             })
         }else if(temp_certificate.awards){
             temp_certificate.awards.forEach( element =>{
