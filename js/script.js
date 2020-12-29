@@ -8,25 +8,29 @@ certificates_vet = [
                 "name": "Aceleração Data Science",
                 "hours": "80h",
                 "year": "2020",
-                "file": "certificates/courses/2020_codenation.pdf"
+                "file": "certificates/courses/2020_codenation.pdf",
+                "description": " Descirção: Programa de formação de profissionais da área de desenvolvimento de aplicações data science, com duração de aproximadamente 10 semanas,  nas quais foram apresentados e trabalhados os principais conceitos e práticas presentes em um projeto data science,  tais como: Linguagem Python, estatísticas, estruturas de dataframes e listas, manipulação de dados, aprendizado de máquina, redes neurais, classificação, regressão,  análise e abstração de problemas de mercado para problemas data science."
             },{
                 "instituition": "Instituto Federal da Paraíba",
                 "name": "Introdução a Deep Learning",
                 "hours": "4h",
                 "year": "2019",
-                "file": "certificates/courses/2019_ifpb.pdf"
+                "file": "certificates/courses/2019_ifpb.pdf",
+                "description":""
             },{
                 "instituition": "Encontro Anual do Iecom em Comunicações, Redes e Criptografia",
                 "name": "Processamento Digital de Imagens Aplicado À Engenharia Biomédica",
                 "hours": "4h",
                 "year": "2016",
-                "file": "certificates/courses/2016_encom.pdf"
+                "file": "certificates/courses/2016_encom.pdf",
+                "description":""
             },{
                 "instituition": "Computar on the Beach",
                 "name": "Jogos Multiplataforma com Cocos2d-x",
                 "hours": "4h",
                 "year": "2015",
-                "file": "certificates/courses/2015_cotb.pdf"
+                "file": "certificates/courses/2015_cotb.pdf",
+                "description":""
             }
         ]
     },
@@ -82,7 +86,7 @@ function loadCertificates() {
     certificates_vet.forEach(temp_certificate => {
         if (temp_certificate.courses){
             temp_certificate.courses.forEach( element =>{
-                str_courses += "<li><i class=\"fa-li fa fa-list text-warning\"></i><a href=\"" +  element.file + "\" target=\"blank\">"+ element.year +" - "+ element.name +" - "+ element.instituition +"</a></li>";
+                str_courses += "<li><i class=\"fa-li fa fa-list text-warning\"></i><a href=\"" +  element.file + "\" target=\"blank\">"+ element.year +" - "+ element.name +" - "+ element.instituition +"</a> "+ element.description +"</li>";
             })
         }else if(temp_certificate.awards){
             temp_certificate.awards.forEach( element =>{
